@@ -1,5 +1,11 @@
 import pytest
-from .app import  sum_two_numbers, multiply_two_numbers, subtract_two_numbers, divide_two_numbers, power_two_numbers, modulus_two_numbers
+from .app import ( sum_two_numbers,
+                multiply_two_numbers,
+                subtract_two_numbers, 
+                divide_two_numbers, power_two_numbers,
+                modulus_two_numbers,
+                user_name
+                )
 class TestApp:
     def test_add(self):
         assert sum_two_numbers(2, 3) == 5
@@ -23,6 +29,9 @@ class TestApp:
     def test_modulus(self):
         assert modulus_two_numbers(10, 3) == 1
         assert modulus_two_numbers(5, 5) == 0
+    def test_user_name(self):
+        assert user_name("Alice") == "Hello, Alice!"
+        assert user_name("") == "Hello, !"
 
     
 
